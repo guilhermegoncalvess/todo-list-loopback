@@ -9,8 +9,6 @@ This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/
 docker-compose up
 ```
 
-You can also run `node .` to skip the build step.
-
 Open http://127.0.0.1:3000 in your browser.
 
 ## What's next
