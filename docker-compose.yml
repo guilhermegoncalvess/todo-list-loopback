@@ -1,0 +1,27 @@
+version: '3'
+services:
+  api:
+    build: .
+    command: ['yarn', 'start']
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongo
+    networks:
+      - default
+      - app-connect
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+    networks:
+      - app-connect
+    environment:
+      MONGO_INITDB_ROOT_DATABSE: todoList
+
+networks:
+  default:
+  app-connect:
+    internal: True
